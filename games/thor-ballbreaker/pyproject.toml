@@ -1,0 +1,23 @@
+[project]
+name = "thor-ballbreaker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "psychowasp", email = "psychowaspx@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pymunk>=7.2.0",
+    "thorvg-cython>=0.0.4",
+]
+
+[project.scripts]
+thor-ballbreaker = "thor_ballbreaker:main"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+find-links = ["../../wheelhouse"]
