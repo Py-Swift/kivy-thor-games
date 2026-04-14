@@ -7,7 +7,13 @@ authors = [
     { name = "psychowasp", email = "psychowaspx@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "kivy==3.0.0.dev0",
+    "kivy-thor>=0.1.0",
+    "thor-asteroids",
+    "thor-ballbreaker",
+    "thor-flappy",
+]
 
 [project.scripts]
 kivy-thor-games = "kivy_thor_games:main"
@@ -16,7 +22,11 @@ kivy-thor-games = "kivy_thor_games:main"
 requires = ["uv_build>=0.11.3,<0.12.0"]
 build-backend = "uv_build"
 
-[tool.uv.workspace]
-members = [
-    "games/thor-flappy",
-]
+
+[tool.uv]
+find-links = ["../wheelhouse"]
+
+[tool.uv.sources]
+thor-flappy = { path = "../games/thor-flappy" }
+thor-asteroids = { path = "../games/thor-asteroids" }
+thor-ballbreaker = { path = "../games/thor-ballbreaker" }

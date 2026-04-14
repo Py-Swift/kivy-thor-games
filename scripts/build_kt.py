@@ -36,6 +36,9 @@ def main() -> None:
     # build_kt.py discovers sibling repos from CWD and clones them if missing
     os.chdir(deps)
 
+    # Wheelhouse lives at project root, not inside dependencies/
+    os.environ.setdefault("WHEELHOUSE", str(root / "wheelhouse"))
+
     build_script = kt_dir / "scripts" / "build_kt.py"
     cmd = [sys.executable, str(build_script), *sys.argv[1:]]
     print(f"==> {' '.join(cmd)}")
