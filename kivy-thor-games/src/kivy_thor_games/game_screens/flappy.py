@@ -11,13 +11,13 @@ Text.font_load(os.path.join(os.path.dirname(_kivy.__file__), 'data', 'fonts', 'R
 Text.font_load(os.path.join(os.path.dirname(_kivy.__file__), 'data', 'fonts', 'Roboto-Bold.ttf'))
 
 
-class ScreenFlappy(ThorScreen):
+class FlappyScreen(ThorScreen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self._scene = FlappyScene(font='Roboto-Regular', font_bold='Roboto-Bold')
 
-        glcanvas = self.thor_fbo.gl_canvas
+        glcanvas = self.gl_canvas
         glcanvas.add(self._scene)
         glcanvas.add(self._scene.hud)
 
@@ -34,8 +34,10 @@ class ScreenFlappy(ThorScreen):
         w, h = int(size[0]), int(size[1])
         if w == 0 or h == 0:
             return
-        self.thor_fbo.set_size((w, h))
+        
+        #self.set_size((w, h))
         self._scene.resize(w, h)
+        return super().on_size(instance, size)
 
     def on_touch_down(self, touch):
         self._scene.tap()
@@ -43,5 +45,5 @@ class ScreenFlappy(ThorScreen):
 
     def _tick(self, dt):
         self._scene.tick(dt)
-        self.thor_fbo.refresh()
+        #self.refresh()
         self.canvas.ask_update()

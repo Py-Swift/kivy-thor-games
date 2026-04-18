@@ -103,6 +103,7 @@ class BallBreakerGame:
         dt = min(dt, 0.05)  # clamp to avoid physics explosion on lag
 
         self._physics.step(dt)
+        self._paddle.sync()
         self._bricks.update(dt)
 
         if self._state == ST_PLAYING:
@@ -117,10 +118,13 @@ class BallBreakerGame:
     # ── input ─────────────────────────────────────────────────────────────────
 
     def move_left(self):
-        self._paddle.nudge(-1)
+        self._paddle.move_left()
 
     def move_right(self):
-        self._paddle.nudge(1)
+        self._paddle.move_right()
+
+    def move_stop(self):
+        self._paddle.move_stop()
 
     def action(self):
         if self._state == ST_IDLE:

@@ -6,6 +6,11 @@ dist/
 wheels/
 wheelhouse/
 *.egg-info
-
+.DS_Store
+uv.lock
 # Virtual environments
-.venv
+kivy-thor-games/.venv
+kivy-thor-games/.kivy/*
+dependencies/*
+dependencies/thorvg-cython
+

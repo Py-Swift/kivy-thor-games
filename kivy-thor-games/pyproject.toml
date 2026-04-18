@@ -13,6 +13,7 @@ dependencies = [
     "thor-asteroids",
     "thor-ballbreaker",
     "thor-flappy",
+    "thorvg-cython>=0.0.5",
 ]
 
 [project.scripts]

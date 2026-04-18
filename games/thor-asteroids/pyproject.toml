@@ -9,7 +9,7 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "pymunk>=7.2.0",
-    "thorvg-cython>=0.0.4",
+    "thorvg-cython",
 ]
 
 [project.scripts]

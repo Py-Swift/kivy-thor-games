@@ -23,7 +23,7 @@ BALL_SPEED_FRAC = 0.5     # speed as fraction of h per second
 PADDLE_W_FRAC     = 0.17  # width as fraction of w
 PADDLE_H_FRAC     = 0.018 # height as fraction of h
 PADDLE_Y_FRAC     = 0.94  # y-center as fraction of h (from top)
-PADDLE_STEP_FRAC  = 0.05  # pixels per key-down event as fraction of w
+PADDLE_SPEED_FRAC = 0.8   # paddle speed as fraction of w per second
 
 # ball glow
 BALL_GLOW_FRAC    = 2.8   # glow radius = ball_r * this
@@ -79,7 +79,7 @@ class Layout:
     __slots__ = (
         'w', 'h',
         'ball_r', 'ball_speed', 'ball_glow_r',
-        'paddle_w', 'paddle_h', 'paddle_y', 'paddle_step',
+        'paddle_w', 'paddle_h', 'paddle_y', 'paddle_speed',
         'brick_cols', 'brick_rows', 'brick_w', 'brick_h',
         'brick_hgap', 'brick_vgap', 'brick_top', 'brick_margin',
         'star_count', 'star_r',
@@ -99,7 +99,7 @@ class Layout:
         self.paddle_w     = w * PADDLE_W_FRAC
         self.paddle_h     = h * PADDLE_H_FRAC
         self.paddle_y     = h * PADDLE_Y_FRAC
-        self.paddle_step  = w * PADDLE_STEP_FRAC
+        self.paddle_speed = w * PADDLE_SPEED_FRAC
 
         # bricks
         self.brick_cols   = BRICK_COLS

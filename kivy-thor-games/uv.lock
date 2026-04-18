@@ -223,6 +223,7 @@ dependencies = [
     { name = "thor-asteroids" },
     { name = "thor-ballbreaker" },
     { name = "thor-flappy" },
+    { name = "thorvg-cython" },
 ]
 
 [package.metadata]
@@ -232,6 +233,7 @@ requires-dist = [
     { name = "thor-asteroids", directory = "../games/thor-asteroids" },
     { name = "thor-ballbreaker", directory = "../games/thor-ballbreaker" },
     { name = "thor-flappy", directory = "../games/thor-flappy" },
+    { name = "thorvg-cython", specifier = ">=0.0.5" },
 ]
 
 [[package]]
@@ -333,7 +335,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "pymunk", specifier = ">=7.2.0" },
-    { name = "thorvg-cython", specifier = ">=0.0.4" },
+    { name = "thorvg-cython" },
 ]
 
 [[package]]
@@ -348,7 +350,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "pymunk", specifier = ">=7.2.0" },
-    { name = "thorvg-cython", specifier = ">=0.0.4" },
+    { name = "thorvg-cython" },
 ]
 
 [[package]]
@@ -364,10 +366,10 @@ requires-dist = [{ name = "thorvg-cython" }]
 
 [[package]]
 name = "thorvg-cython"
-version = "0.0.4"
+version = "0.0.5"
 source = { registry = "../wheelhouse" }
 wheels = [
-    { path = "thorvg_cython-0.0.4-cp313-cp313-macosx_11_0_x86_64.whl" },
+    { path = "thorvg_cython-0.0.5-cp313-cp313-macosx_11_0_x86_64.whl" },
 ]
 
 [[package]]

@@ -13,11 +13,11 @@ class AsteroidsScreen(ThorScreen):
         w, h = int(size[0]), int(size[1])
         if w == 0 or h == 0:
             return
-        self.thor_fbo.set_size((w, h))
+        self.t_layer.set_size((w, h))
         try:
             self._game.resize(w, h)
         except AttributeError:
-            self._game = AsteroidsGame(self.thor_fbo.gl_canvas, w, h)
+            self._game = AsteroidsGame(self.gl_canvas, w, h)
 
     # ── lifecycle ──────────────────────────────────────────────────────────────
 
@@ -35,7 +35,7 @@ class AsteroidsScreen(ThorScreen):
 
     def _tick(self, dt):
         self._game.tick(dt)
-        self.thor_fbo.refresh()
+        #self.thor_fbo.refresh()
         self.canvas.ask_update()
 
     # ── keyboard ──────────────────────────────────────────────────────────────

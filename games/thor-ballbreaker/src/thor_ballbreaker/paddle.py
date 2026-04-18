@@ -19,7 +19,7 @@ class Paddle:
         scene.add(self._shp_glow)
         scene.add(self._shp_body)
         self._build(layout)
-        self._sync_visual()
+        self.sync()
 
     # ── build / teardown ──────────────────────────────────────────────────────
 
@@ -27,7 +27,7 @@ class Paddle:
         self._pw = lo.paddle_w
         self._ph = lo.paddle_h
         self._py = lo.paddle_y
-        self._step = lo.paddle_step
+        self._speed = lo.paddle_speed
         self._lo_w = lo.w
 
         self._body = pymunk.Body(body_type=pymunk.Body.KINEMATIC)
@@ -82,7 +82,7 @@ class Paddle:
     def rebuild(self, layout: Layout):
         self._teardown_physics()
         self._build(layout)
-        self._sync_visual()
+        self.sync()
 
     # ── game actions ──────────────────────────────────────────────────────────
 
@@ -90,21 +90,26 @@ class Paddle:
     def x(self):
         return self._body.position[0]
 
-    def nudge(self, direction: int):
-        x, y = self._body.position
-        x += direction * self._step
-        self._body.position = (x, y)
-        self._sync_visual()
+    def move_left(self):
+        self._body.velocity = (-self._speed, 0)
 
-    def _sync_visual(self):
+    def move_right(self):
+        self._body.velocity = (self._speed, 0)
+
+    def move_stop(self):
+        self._body.velocity = (0, 0)
+
+    def sync(self):
         x, y = self._body.position
         half = self._pw / 2
         if x < half:
             x = half
             self._body.position = (x, y)
+            self._body.velocity = (0, 0)
         elif x > self._lo_w - half:
             x = self._lo_w - half
             self._body.position = (x, y)
+            self._body.velocity = (0, 0)
 
         m = Matrix()
         m.e13 = x

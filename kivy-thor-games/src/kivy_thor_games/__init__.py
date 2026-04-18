@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from kivy-thor-games!")
+from .app import main
