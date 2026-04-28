@@ -10,10 +10,13 @@ Usage:
     python scripts/build_kt.py kivythor macos
     python scripts/build_kt.py thorgpu ios
 
-Set KIVY_THOR_LOCAL to use a local kivy-thor checkout instead of
-cloning/pulling from GitHub:
+Set KIVY_THOR_LOCAL to use a specific local kivy-thor checkout instead of
+the sibling directory or GitHub:
 
     KIVY_THOR_LOCAL=/path/to/kivy-thor scripts/build_kt.py all macos
+
+Android SDK/NDK are auto-discovered from the project's .psproject directory.
+Override with ANDROID_HOME / ANDROID_NDK_HOME if needed.
 """
 from __future__ import annotations
 
@@ -30,11 +33,37 @@ def _sync_local(local: Path, dest: Path) -> None:
     """Copy local kivy-thor checkout into dependencies/, skipping .git/venv."""
     if dest.exists():
         shutil.rmtree(dest)
-    print(f"==> Syncing local kivy-thor: {local} → {dest}")
+    print(f"==> Syncing local kivy-thor: {local} \u2192 {dest}")
     shutil.copytree(
         local, dest,
         ignore=shutil.ignore_patterns(".git", ".venv", "__pycache__", "*.egg-info", "build"),
     )
+
+
+def _setup_android_env(root: Path) -> None:
+    """Read NDK version from pyproject.toml and set ANDROID_HOME / ANDROID_NDK_HOME.
+
+    Path is always: <root>/<root.name>/.psproject/android-sdk/ndk/<version>
+    Hard-exits if the directory isn't present.
+    """
+    import tomllib
+
+    pyproject = root / root.name / "pyproject.toml"
+    with open(pyproject, "rb") as fh:
+        cfg = tomllib.load(fh)
+
+    ndk_version = cfg["tool"]["psproject"]["android"]["ndk"]
+    sdk_dir = root / root.name / ".psproject" / "android-sdk"
+    ndk_dir = sdk_dir / "ndk" / ndk_version
+
+    if not ndk_dir.is_dir():
+        print(f"ERROR: Android NDK {ndk_version} not found at {ndk_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    os.environ["ANDROID_HOME"] = str(sdk_dir)
+    os.environ["ANDROID_NDK_HOME"] = str(ndk_dir)
+    print(f"==> ANDROID_HOME={sdk_dir}")
+    print(f"==> ANDROID_NDK_HOME={ndk_dir}")
 
 
 def main() -> None:
@@ -43,16 +72,23 @@ def main() -> None:
     deps.mkdir(exist_ok=True)
 
     kt_dir = deps / "kivy-thor"
-    local = os.environ.get("KIVY_THOR_LOCAL", "")
+    local = os.environ.get("KIVY_THOR_LOCAL", None)
 
+    # Auto-detect sibling kivy-thor in the workspace (e.g. ../kivy-thor)
+    sibling_kt = root.parent / "kivy-thor"
     if local:
         _sync_local(Path(local).expanduser().resolve(), kt_dir)
+    elif sibling_kt.is_dir():
+        _sync_local(sibling_kt, kt_dir)
     elif not kt_dir.exists():
         print(f"==> Cloning kivy-thor into {kt_dir}")
         subprocess.run(["git", "clone", KIVY_THOR_URL, str(kt_dir)], check=True)
     else:
         print(f"==> kivy-thor exists, pulling latest...")
         subprocess.run(["git", "pull"], check=True, cwd=kt_dir)
+
+    # ── Android SDK / NDK ────────────────────────────────────────────────────
+    _setup_android_env(root)
 
     # build_kt.py discovers sibling repos from CWD and clones them if missing
     os.chdir(deps)

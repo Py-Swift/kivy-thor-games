@@ -14,3 +14,6 @@ kivy-thor-games/.kivy/*
 dependencies/*
 dependencies/thorvg-cython
 
+.psproject/
+.psproject/backends/sh.py
+.psproject/backends/bin/pip3

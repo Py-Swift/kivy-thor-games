@@ -1,13 +1,16 @@
 [project]
 name = "thor-tetris"
 version = "0.1.0"
-description = "Add your description here"
+description = "Tetris game with thorvg-cython rendering and pymunk debris physics"
 readme = "README.md"
 authors = [
     { name = "psychowasp", email = "psychowaspx@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pymunk",
+    "thorvg-cython>=0.0.5",
+]
 
 [project.scripts]
 thor-tetris = "thor_tetris:main"

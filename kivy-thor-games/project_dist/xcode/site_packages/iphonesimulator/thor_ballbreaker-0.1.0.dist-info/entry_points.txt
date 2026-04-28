@@ -1,0 +1,3 @@
+[console_scripts]
+thor-ballbreaker = thor_ballbreaker:main
+

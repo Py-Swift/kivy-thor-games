@@ -1,0 +1,78 @@
+{
+  "originHash" : "8bf8ce02df057ae717a359ce248ce4fee2e05998973ebc8e4a860dc25e96fdd9",
+  "pins" : [
+    {
+      "identity" : "cpython",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/py-swift/CPython",
+      "state" : {
+        "revision" : "1a8beb8414362dd2f305f82a2a008e089fc80616",
+        "version" : "313.8.4"
+      }
+    },
+    {
+      "identity" : "kivy_ios_module",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kivy-school/Kivy_iOS_Module",
+      "state" : {
+        "branch" : "master",
+        "revision" : "feee89ef60567861f2510650e5dcfad4d739151d"
+      }
+    },
+    {
+      "identity" : "kivylauncher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kivy-school/KivyLauncher",
+      "state" : {
+        "branch" : "master",
+        "revision" : "92ae19a37b225cf51803d501facb1b7e0558f214"
+      }
+    },
+    {
+      "identity" : "pathkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kylef/PathKit",
+      "state" : {
+        "revision" : "3bfd2737b700b9a36565a8c94f4ad2b050a5e574",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "pyswiftkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/py-swift/PySwiftKit",
+      "state" : {
+        "revision" : "57da95de514658b44c589d669fca66a21b7c145d",
+        "version" : "313.1.2"
+      }
+    },
+    {
+      "identity" : "pythonlauncher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/py-swift/PythonLauncher",
+      "state" : {
+        "revision" : "37193f844d59149dd7cd9dc72cffc95d4d1c9e44",
+        "version" : "313.7.1"
+      }
+    },
+    {
+      "identity" : "spectre",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kylef/Spectre.git",
+      "state" : {
+        "revision" : "26cc5e9ae0947092c7139ef7ba612e34646086c7",
+        "version" : "0.10.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "f99ae8aa18f0cf0d53481901f88a0991dc3bd4a2",
+        "version" : "601.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

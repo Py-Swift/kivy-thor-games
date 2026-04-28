@@ -161,6 +161,11 @@ dependencies = [
 ]
 wheels = [
     { path = "kivy-3.0.0.dev0-cp313-cp313-macosx_10_15_x86_64.whl" },
+    { path = "kivy-3.0.0.dev0-cp313-cp313-android_21_arm64_v8a.whl" },
+    { path = "kivy-3.0.0.dev0-cp313-cp313-android_21_x86_64.whl" },
+    { path = "kivy-3.0.0.dev0-cp313-cp313-ios_13_0_arm64_iphoneos.whl" },
+    { path = "kivy-3.0.0.dev0-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl" },
+    { path = "kivy-3.0.0.dev0-cp313-cp313-ios_13_0_x86_64_iphonesimulator.whl" },
 ]
 
 [[package]]
@@ -211,6 +216,11 @@ dependencies = [
 ]
 wheels = [
     { path = "kivy_thor-0.1.0-cp313-cp313-macosx_11_0_x86_64.whl" },
+    { path = "kivy_thor-0.1.0-cp313-cp313-android_21_arm64_v8a.whl" },
+    { path = "kivy_thor-0.1.0-cp313-cp313-android_21_x86_64.whl" },
+    { path = "kivy_thor-0.1.0-cp313-cp313-ios_13_0_arm64_iphoneos.whl" },
+    { path = "kivy_thor-0.1.0-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl" },
+    { path = "kivy_thor-0.1.0-cp313-cp313-ios_13_0_x86_64_iphonesimulator.whl" },
 ]
 
 [[package]]
@@ -223,7 +233,14 @@ dependencies = [
     { name = "thor-asteroids" },
     { name = "thor-ballbreaker" },
     { name = "thor-flappy" },
+    { name = "thor-tempest-run" },
+    { name = "thor-tetris" },
     { name = "thorvg-cython" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "psproject" },
 ]
 
 [package.metadata]
@@ -233,7 +250,25 @@ requires-dist = [
     { name = "thor-asteroids", directory = "../games/thor-asteroids" },
     { name = "thor-ballbreaker", directory = "../games/thor-ballbreaker" },
     { name = "thor-flappy", directory = "../games/thor-flappy" },
+    { name = "thor-tempest-run", directory = "../games/thor-tempest-run" },
+    { name = "thor-tetris", directory = "../games/thor-tetris" },
     { name = "thorvg-cython", specifier = ">=0.0.5" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "psproject", directory = "../../../psproject_development/PSProject" }]
+
+[[package]]
+name = "psproject"
+version = "1.0.9"
+source = { directory = "../../../psproject_development/PSProject" }
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "cibuildwheel", specifier = ">=2.23.3" },
+    { name = "setuptools", specifier = ">=82.0.0" },
 ]
 
 [[package]]
@@ -365,11 +400,48 @@ dependencies = [
 requires-dist = [{ name = "thorvg-cython" }]
 
 [[package]]
+name = "thor-tempest-run"
+version = "0.1.0"
+source = { directory = "../games/thor-tempest-run" }
+dependencies = [
+    { name = "kivy" },
+    { name = "pymunk" },
+    { name = "thorvg-cython" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "kivy" },
+    { name = "pymunk", specifier = ">=7.2.0" },
+    { name = "thorvg-cython" },
+]
+
+[[package]]
+name = "thor-tetris"
+version = "0.1.0"
+source = { directory = "../games/thor-tetris" }
+dependencies = [
+    { name = "pymunk" },
+    { name = "thorvg-cython" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pymunk" },
+    { name = "thorvg-cython", specifier = ">=0.0.5" },
+]
+
+[[package]]
 name = "thorvg-cython"
 version = "0.0.5"
 source = { registry = "../wheelhouse" }
 wheels = [
     { path = "thorvg_cython-0.0.5-cp313-cp313-macosx_11_0_x86_64.whl" },
+    { path = "thorvg_cython-0.0.5-cp313-cp313-android_24_arm64_v8a.whl" },
+    { path = "thorvg_cython-0.0.5-cp313-cp313-android_24_x86_64.whl" },
+    { path = "thorvg_cython-0.0.5-cp313-cp313-ios_13_0_arm64_iphoneos.whl" },
+    { path = "thorvg_cython-0.0.5-cp313-cp313-ios_13_0_arm64_iphonesimulator.whl" },
+    { path = "thorvg_cython-0.0.5-cp313-cp313-ios_13_0_x86_64_iphonesimulator.whl" },
 ]
 
 [[package]]

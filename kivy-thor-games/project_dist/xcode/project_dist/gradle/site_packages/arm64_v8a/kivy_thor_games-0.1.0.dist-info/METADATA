@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: kivy-thor-games
+Version: 0.1.0
+Summary: Add your description here
+Author: psychowasp
+Author-email: psychowasp <psychowaspx@gmail.com>
+Requires-Dist: kivy==3.0.0.dev0
+Requires-Dist: kivy-thor>=0.1.0
+Requires-Dist: thor-asteroids
+Requires-Dist: thor-ballbreaker
+Requires-Dist: thor-flappy
+Requires-Dist: thor-tempest-run
+Requires-Dist: thor-tetris
+Requires-Dist: thorvg-cython>=0.0.5
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+

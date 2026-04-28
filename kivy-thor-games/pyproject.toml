@@ -1,33 +1,82 @@
-[project]
-name = "kivy-thor-games"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-authors = [
-    { name = "psychowasp", email = "psychowaspx@gmail.com" }
+[build-system]
+build-backend = "uv_build"
+requires = [ "uv_build>=0.11.3,<0.12.0" ]
+
+[dependency-groups]
+dev = [
+    "psproject",
 ]
-requires-python = ">=3.13"
+
+[project]
+authors = [ { email = "psychowaspx@gmail.com", name = "psychowasp" } ]
 dependencies = [
     "kivy==3.0.0.dev0",
     "kivy-thor>=0.1.0",
     "thor-asteroids",
     "thor-ballbreaker",
     "thor-flappy",
+    "thor-tempest-run",
+    "thor-tetris",
     "thorvg-cython>=0.0.5",
 ]
+description = "Add your description here"
+name = "kivy-thor-games"
+readme = "README.md"
+requires-python = ">=3.13"
+version = "0.1.0"
 
 [project.scripts]
 kivy-thor-games = "kivy_thor_games:main"
 
-[build-system]
-requires = ["uv_build>=0.11.3,<0.12.0"]
-build-backend = "uv_build"
-
-
-[tool.uv]
-find-links = ["../wheelhouse"]
-
 [tool.uv.sources]
-thor-flappy = { path = "../games/thor-flappy" }
 thor-asteroids = { path = "../games/thor-asteroids" }
 thor-ballbreaker = { path = "../games/thor-ballbreaker" }
+thor-flappy = { path = "../games/thor-flappy" }
+thor-tempest-run = { path = "../games/thor-tempest-run" }
+thor-tetris = { path = "../games/thor-tetris" }
+psproject = { path = "../../../psproject_development/PSProject" }
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+find-links = [ "../wheelhouse" ]
+
+
+[tool.uv.pip]
+extra-index-url = [
+    "https://pypi.anaconda.org/beeware/simple",
+    "https://pypi.anaconda.org/pyswift/simple",
+    "https://pypi.anaconda.org/kivyschool/simple"
+]
+find-links = [ "../wheelhouse" ]
+
+#### PSProject Configuration ####
+
+[tool.psproject]
+app_name = "KivyThorGames"
+backends = [
+    "kivyschool.kivy3launcher"
+]
+copy__main__py = true
+cythonized = false
+pip_install_app = true
+
+[tool.psproject.entitlements]
+
+[tool.psproject.info_plist]
+
+[tool.psproject.ios]
+backends = []
+
+[tool.psproject.macos]
+
+[tool.psproject.android]
+api = 35
+archs = [ "x86_64", "arm64-v8a" ]
+backends = []
+min_api = 24
+ndk = "27.3.13750724"
+ndk_api = 24
+package_name = "org.example.kivythorgames"
+sdk = "35"
+
+[tool.psproject.swift_packages]

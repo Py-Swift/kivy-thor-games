@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B36FB40D1FF791DFFE4E3D /* SDL3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BA1019A13F25409432C0D1 /* SDL3.xcframework */; platformFilter = ios; };
+		2753D02B80CC8D089D9707FB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E654EA428D73323F08FAE753 /* Launch Screen.storyboard */; platformFilter = ios; };
+		3DE1A8BD0E6CD68E8F17FB85 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F9724CD0C299306F795B9 /* main.swift */; platformFilters = (macos, ); };
+		40E95345EE765D3DFF79694F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B57C81F00375353E980A3 /* main.swift */; platformFilter = ios; };
+		47A47107093A56ADA62B8623 /* libEGL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D2F151AA60D16A416CFE8A /* libEGL.xcframework */; platformFilter = ios; };
+		48C440709707F626304DE1E2 /* SDL3_image.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980A7CA75330452E3841E880 /* SDL3_image.xcframework */; platformFilter = ios; };
+		543B664BCB37C405DE7A2A33 /* Kivy_iOS_Module in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = F88137A6F274957865F99728 /* Kivy_iOS_Module */; };
+		5A06E31C6080420FB85686D4 /* SDL3_ttf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CC2D22697203DD4DD7E2C /* SDL3_ttf.xcframework */; platformFilter = ios; };
+		5A8231F20683E8A1E285100F /* PySwiftKitBase in Frameworks */ = {isa = PBXBuildFile; productRef = 7778E69854AB9622E4C4DF1B /* PySwiftKitBase */; };
+		5DEB03EA1AD4BB311F6B77B8 /* Kivy3Launcher in Frameworks */ = {isa = PBXBuildFile; productRef = 6AB44F85B4CC02A37DD933AF /* Kivy3Launcher */; };
+		68365A7D2F90EB5700352D7C /* thorvg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68365A7C2F90EB5700352D7C /* thorvg.xcframework */; };
+		68365A7E2F90EB5700352D7C /* thorvg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68365A7C2F90EB5700352D7C /* thorvg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		68365A802F90EB6300352D7C /* libomp.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68365A7F2F90EB6300352D7C /* libomp.xcframework */; };
+		68365A812F90EB6300352D7C /* libomp.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68365A7F2F90EB6300352D7C /* libomp.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		695552EF54A3F5D6F62BF5D6 /* libGLESv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459D19F46F6FAC29DC123151 /* libGLESv2.xcframework */; platformFilter = ios; };
+		6EFEA7639E44B40E7CE98E1A /* Kivy_iOS_Module in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = BEF6C5241C67D03533726764 /* Kivy_iOS_Module */; };
+		B40A818E264E21E2AECE5558 /* SDL3_image.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 980A7CA75330452E3841E880 /* SDL3_image.xcframework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B909BAFC205DCF8BD7896FD6 /* dylib-Info-template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E26ED530067E0A553BEFECC /* dylib-Info-template.plist */; };
+		C6F46523A5883BA8A16D67CB /* SDL3_ttf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D88CC2D22697203DD4DD7E2C /* SDL3_ttf.xcframework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA0E5949BFE5EDDA16558EB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3C2FEB57A6E5E270DA845F /* Images.xcassets */; };
+		CF03D23E3680C73BD33450F1 /* SDL3_mixer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8824F3DA49E1951D461D745 /* SDL3_mixer.xcframework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E299CAA26491539C28B94973 /* SDL3.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63BA1019A13F25409432C0D1 /* SDL3.xcframework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2DFF1C166E2FAC83B8E513E /* CPython in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB5119031C47D35760D0AC4 /* CPython */; };
+		E9BA8A4643FB8BFAB6F5F3B2 /* SDL3_mixer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8824F3DA49E1951D461D745 /* SDL3_mixer.xcframework */; platformFilter = ios; };
+		F2E2059298B94DBB402E2751 /* libGLESv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 459D19F46F6FAC29DC123151 /* libGLESv2.xcframework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F63D0662EFCD66833B9056F8 /* Kivy3Launcher in Frameworks */ = {isa = PBXBuildFile; productRef = 6170EE4E97DB5AB61D704839 /* Kivy3Launcher */; };
+		FF6151A41370209BDC4D89E2 /* libEGL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8D2F151AA60D16A416CFE8A /* libEGL.xcframework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CAE7ACF79B36438B86DB8B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E299CAA26491539C28B94973 /* SDL3.xcframework in Embed Frameworks */,
+				B40A818E264E21E2AECE5558 /* SDL3_image.xcframework in Embed Frameworks */,
+				CF03D23E3680C73BD33450F1 /* SDL3_mixer.xcframework in Embed Frameworks */,
+				C6F46523A5883BA8A16D67CB /* SDL3_ttf.xcframework in Embed Frameworks */,
+				68365A812F90EB6300352D7C /* libomp.xcframework in Embed Frameworks */,
+				FF6151A41370209BDC4D89E2 /* libEGL.xcframework in Embed Frameworks */,
+				68365A7E2F90EB5700352D7C /* thorvg.xcframework in Embed Frameworks */,
+				F2E2059298B94DBB402E2751 /* libGLESv2.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0DBF92C9142027244332C8CD /* KivyThorGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KivyThorGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E26ED530067E0A553BEFECC /* dylib-Info-template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "dylib-Info-template.plist"; sourceTree = "<group>"; };
+		459D19F46F6FAC29DC123151 /* libGLESv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libGLESv2.xcframework; path = Support/libGLESv2.xcframework; sourceTree = "<group>"; };
+		63BA1019A13F25409432C0D1 /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3.xcframework; path = Support/SDL3.xcframework; sourceTree = "<group>"; };
+		68365A7C2F90EB5700352D7C /* thorvg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = thorvg.xcframework; path = Support/thorvg.xcframework; sourceTree = "<group>"; };
+		68365A7F2F90EB6300352D7C /* libomp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libomp.xcframework; path = Support/libomp.xcframework; sourceTree = "<group>"; };
+		8C3C2FEB57A6E5E270DA845F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		980A7CA75330452E3841E880 /* SDL3_image.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3_image.xcframework; path = Support/SDL3_image.xcframework; sourceTree = "<group>"; };
+		A8824F3DA49E1951D461D745 /* SDL3_mixer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3_mixer.xcframework; path = Support/SDL3_mixer.xcframework; sourceTree = "<group>"; };
+		B8D2F151AA60D16A416CFE8A /* libEGL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libEGL.xcframework; path = Support/libEGL.xcframework; sourceTree = "<group>"; };
+		C60B57C81F00375353E980A3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D88CC2D22697203DD4DD7E2C /* SDL3_ttf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3_ttf.xcframework; path = Support/SDL3_ttf.xcframework; sourceTree = "<group>"; };
+		DF6F9724CD0C299306F795B9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E654EA428D73323F08FAE753 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9699F86B8CF2C4063A4CDD7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A8231F20683E8A1E285100F /* PySwiftKitBase in Frameworks */,
+				E2DFF1C166E2FAC83B8E513E /* CPython in Frameworks */,
+				07B36FB40D1FF791DFFE4E3D /* SDL3.xcframework in Frameworks */,
+				48C440709707F626304DE1E2 /* SDL3_image.xcframework in Frameworks */,
+				E9BA8A4643FB8BFAB6F5F3B2 /* SDL3_mixer.xcframework in Frameworks */,
+				5A06E31C6080420FB85686D4 /* SDL3_ttf.xcframework in Frameworks */,
+				47A47107093A56ADA62B8623 /* libEGL.xcframework in Frameworks */,
+				695552EF54A3F5D6F62BF5D6 /* libGLESv2.xcframework in Frameworks */,
+				68365A802F90EB6300352D7C /* libomp.xcframework in Frameworks */,
+				F63D0662EFCD66833B9056F8 /* Kivy3Launcher in Frameworks */,
+				6EFEA7639E44B40E7CE98E1A /* Kivy_iOS_Module in Frameworks */,
+				5DEB03EA1AD4BB311F6B77B8 /* Kivy3Launcher in Frameworks */,
+				543B664BCB37C405DE7A2A33 /* Kivy_iOS_Module in Frameworks */,
+				68365A7D2F90EB5700352D7C /* thorvg.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06787E2115AD640FE24CE9D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DBF92C9142027244332C8CD /* KivyThorGames.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA8450645D9B4FA0B6FF435 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C2FEB57A6E5E270DA845F /* Images.xcassets */,
+				E654EA428D73323F08FAE753 /* Launch Screen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6F000FD60417672F5CD1B7F5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7D4AFCB7989A85CD31BD3FD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68365A7F2F90EB6300352D7C /* libomp.xcframework */,
+				68365A7C2F90EB5700352D7C /* thorvg.xcframework */,
+				B8D2F151AA60D16A416CFE8A /* libEGL.xcframework */,
+				459D19F46F6FAC29DC123151 /* libGLESv2.xcframework */,
+				980A7CA75330452E3841E880 /* SDL3_image.xcframework */,
+				A8824F3DA49E1951D461D745 /* SDL3_mixer.xcframework */,
+				D88CC2D22697203DD4DD7E2C /* SDL3_ttf.xcframework */,
+				63BA1019A13F25409432C0D1 /* SDL3.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C54371979B97946AB60A85BA /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF6F9724CD0C299306F795B9 /* main.swift */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		CB6EC40C1F84B6EC2DB0AC56 /* IphoneOS */ = {
+			isa = PBXGroup;
+			children = (
+				C60B57C81F00375353E980A3 /* main.swift */,
+			);
+			path = IphoneOS;
+			sourceTree = "<group>";
+		};
+		D7BE10D9C6C82B0812F82408 = {
+			isa = PBXGroup;
+			children = (
+				3AA8450645D9B4FA0B6FF435 /* Resources */,
+				F9BD21922C28CF95A0E4145E /* Sources */,
+				D8092ECED75CFC867303859A /* Support */,
+				D9001E0E3711236D22A068A6 /* xcode */,
+				7D4AFCB7989A85CD31BD3FD7 /* Frameworks */,
+				06787E2115AD640FE24CE9D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8092ECED75CFC867303859A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3E26ED530067E0A553BEFECC /* dylib-Info-template.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		D9001E0E3711236D22A068A6 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = xcode;
+			sourceTree = "<group>";
+		};
+		F9BD21922C28CF95A0E4145E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CB6EC40C1F84B6EC2DB0AC56 /* IphoneOS */,
+				C54371979B97946AB60A85BA /* MacOS */,
+				6F000FD60417672F5CD1B7F5 /* Shared */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CCCB39AA3B6E474868472BD /* KivyThorGames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A9B8F497A4F614F36E5EFBA /* Build configuration list for PBXNativeTarget "KivyThorGames" */;
+			buildPhases = (
+				62CD2C763FDE0704D1BD1F81 /* Sources */,
+				C7731C77AD29EDE256DF8C66 /* Resources */,
+				9699F86B8CF2C4063A4CDD7E /* Frameworks */,
+				3CAE7ACF79B36438B86DB8B0 /* Embed Frameworks */,
+				621CCB92AAED5A4516EC8D31 /* Install App Module */,
+				FEC016AA711B455B4BDF5F39 /* Install target specific Python modules */,
+				9C3E698B44043325A8EEEC4F /* Sign Python Binary Modules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KivyThorGames;
+			packageProductDependencies = (
+				7778E69854AB9622E4C4DF1B /* PySwiftKitBase */,
+				0DB5119031C47D35760D0AC4 /* CPython */,
+				6170EE4E97DB5AB61D704839 /* Kivy3Launcher */,
+				BEF6C5241C67D03533726764 /* Kivy_iOS_Module */,
+				6AB44F85B4CC02A37DD933AF /* Kivy3Launcher */,
+				F88137A6F274957865F99728 /* Kivy_iOS_Module */,
+			);
+			productName = KivyThorGames;
+			productReference = 0DBF92C9142027244332C8CD /* KivyThorGames.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C1418BE9DC4DDDDB6BCBF54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7CCCB39AA3B6E474868472BD = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEA87983A9574548F7925488 /* Build configuration list for PBXProject "KivyThorGames" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D7BE10D9C6C82B0812F82408;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6864E7B73F0317D1F023DD6B /* XCRemoteSwiftPackageReference "CPython" */,
+				17980C2E38EAB5F270DDB84F /* XCRemoteSwiftPackageReference "KivyLauncher" */,
+				BDFFFCE515DFB0B86B794B80 /* XCRemoteSwiftPackageReference "Kivy_iOS_Module" */,
+				FFBF1423192C4D8CABEC9598 /* XCRemoteSwiftPackageReference "PySwiftKit" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CCCB39AA3B6E474868472BD /* KivyThorGames */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7731C77AD29EDE256DF8C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0E5949BFE5EDDA16558EB3 /* Images.xcassets in Resources */,
+				2753D02B80CC8D089D9707FB /* Launch Screen.storyboard in Resources */,
+				B909BAFC205DCF8BD7896FD6 /* dylib-Info-template.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		621CCB92AAED5A4516EC8D31 /* Install App Module */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install App Module";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$HOME/.local/bin:$PATH\"\n\nAPP_SRC=\"$PROJECT_DIR/../../\"\nPIP3=\"uv pip\"\nPIP_ARGS=\"--compile -U --no-deps\"\n\nif [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphonesimulator\" ]; then\n    echo \"Installing App module for iOS Simulator\"\n    $PIP3 install $APP_SRC $PIP_ARGS -t \"$PROJECT_DIR/site_packages/iphonesimulator/\"\nelif [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n    echo \"Installing App module for iOS\"\n    $PIP3 install $APP_SRC $PIP_ARGS -t \"$PROJECT_DIR/site_packages/iphoneos/\" \nelse\n    echo \"Installing App module for macOS\"\n    $PIP3 install $APP_SRC $PIP_ARGS -t \"$PROJECT_DIR/site_packages/macos/\" \nfi";
+		};
+		9C3E698B44043325A8EEEC4F /* Sign Python Binary Modules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Python Binary Modules";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphonesimulator\" ] || [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n    echo \"Installing Python modules for iOS Device/Simulator\"\n    install_dylib () {\n\t    INSTALL_BASE=$1\n\t    FULL_EXT=$2\n\t\n\t    # The name of the extension file\n\t    EXT=$(basename \"$FULL_EXT\")\n\t    # The location of the extension file, relative to the bundle\n\t    RELATIVE_EXT=${FULL_EXT#$CODESIGNING_FOLDER_PATH/} \n\t    # The path to the extension file, relative to the install base\n\t    PYTHON_EXT=${RELATIVE_EXT/$INSTALL_BASE/}\n\t    # The full dotted name of the extension module, constructed from the file path.\n\t    FULL_MODULE_NAME=$(echo $PYTHON_EXT | cut -d \".\" -f 1 | tr \"/\" \".\"); \n\t    # A bundle identifier; not actually used, but required by Xcode framework packaging\n\t    FRAMEWORK_BUNDLE_ID=$(echo $PRODUCT_BUNDLE_IDENTIFIER.$FULL_MODULE_NAME | tr \"_\" \"-\")\n\t    # The name of the framework folder.\n\t    FRAMEWORK_FOLDER=\"Frameworks/$FULL_MODULE_NAME.framework\"\n\t\n\t    # If the framework folder doesn't exist, create it.\n\t    if [ ! -d \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER\" ]; then\n\t        echo \"Creating framework for $RELATIVE_EXT\" \n\t        mkdir -p \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER\"\n\t\n\t        cp \"$CODESIGNING_FOLDER_PATH/dylib-Info-template.plist\" \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER/Info.plist\"\n\t        plutil -replace CFBundleExecutable -string \"$FULL_MODULE_NAME\" \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER/Info.plist\"\n\t        plutil -replace CFBundleIdentifier -string \"$FRAMEWORK_BUNDLE_ID\" \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER/Info.plist\"\n\t    fi\n\t    \n\t    echo \"Installing binary for $FRAMEWORK_FOLDER/$FULL_MODULE_NAME\" \n\t    mv \"$FULL_EXT\" \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER/$FULL_MODULE_NAME\"\n\t    \n\t    # Create a placeholder .fwork file where the .so was\n\t    echo \"$FRAMEWORK_FOLDER/$FULL_MODULE_NAME\" > ${FULL_EXT%.so}.fwork\n\t    \n\t    # Create a back reference to the .so file location in the framework\n\t    echo \"${RELATIVE_EXT%.so}.fwork\" > \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER/$FULL_MODULE_NAME.origin\"\n\t    \n\t    # Copy privacy manifest into framework if one exists alongside the .so\n\t    XCPRIVACY_FILE=\"$(dirname \"$FULL_EXT\")/$(echo $EXT | cut -d '.' -f 1).xcprivacy\"\n\t    if [ -f \"$XCPRIVACY_FILE\" ]; then\n\t    echo \"Copying privacy manifest for $FULL_MODULE_NAME\"\n\t    cp \"$XCPRIVACY_FILE\" \"$CODESIGNING_FOLDER_PATH/$FRAMEWORK_FOLDER/PrivacyInfo.xcprivacy\"\n\t    fi\n\t}\n\t\n\techo \"Install standard library extension modules...\"\n\tfind \"$CODESIGNING_FOLDER_PATH/python/lib/python3.13/lib-dynload\" -name \"*.so\" | while read FULL_EXT; do\n\t    install_dylib python/lib/python3.13/lib-dynload/ \"$FULL_EXT\"\n\tdone\n\techo \"Install app package extension modules...\"\n\tfind \"$CODESIGNING_FOLDER_PATH/site_packages\" -name \"*.so\" | while read FULL_EXT; do\n\t    install_dylib app_packages/ \"$FULL_EXT\"\n\tdone\n\techo \"Install app extension modules...\"\n\tfind \"$CODESIGNING_FOLDER_PATH/app\" -name \"*.so\" | while read FULL_EXT; do\n\t    install_dylib app/ \"$FULL_EXT\"\n\tdone\n\t\n\t# Clean up dylib template \n\trm -f \"$CODESIGNING_FOLDER_PATH/dylib-Info-template.plist\"\n\t\n\techo \"Signing frameworks as $EXPANDED_CODE_SIGN_IDENTITY_NAME ($EXPANDED_CODE_SIGN_IDENTITY)...\"\n\tfind \"$CODESIGNING_FOLDER_PATH/Frameworks\" -name \"*.framework\" -exec /usr/bin/codesign --force --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" ${OTHER_CODE_SIGN_FLAGS:-} -o runtime --timestamp=none --preserve-metadata=identifier,entitlements,flags --generate-entitlement-der \"{}\" \\; \nelse\n    echo \"Installing Python modules for macOS\"\n    set -e\n\techo \"Signed as $EXPANDED_CODE_SIGN_IDENTITY_NAME ($EXPANDED_CODE_SIGN_IDENTITY)\"\n\t\n\tfind \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/site_packages\" -name \"*.so\" -exec /usr/bin/codesign --force --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" -o runtime --timestamp=none --preserve-metadata=identifier,entitlements,flags --generate-entitlement-der {} \\; \n\tfind \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/app\" -name \"*.so\" -exec /usr/bin/codesign --force --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" -o runtime --timestamp=none --preserve-metadata=identifier,entitlements,flags --generate-entitlement-der {} \\; \nfi";
+		};
+		FEC016AA711B455B4BDF5F39 /* Install target specific Python modules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install target specific Python modules";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphonesimulator\" ] || [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n    echo \"Installing Python modules for iOS Device/Simulator\"\n    mkdir -p \"$CODESIGNING_FOLDER_PATH/python/lib\"\n\tif [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphonesimulator\" ]; then\n\t    echo \"Installing Python modules for iOS Simulator\"\n\t    rsync -au --delete \"$PROJECT_DIR/Support/ios-arm64_x86_64-simulator/lib/\" \"$CODESIGNING_FOLDER_PATH/python/lib/\" \n\t    rsync -au --delete \"$PROJECT_DIR/site_packages/iphonesimulator/\" \"$CODESIGNING_FOLDER_PATH/site_packages\" \n\telse\n\t    echo \"Installing Python modules for iOS Device\"\n\t    rsync -au --delete \"$PROJECT_DIR/Support/ios-arm64/lib/\" \"$CODESIGNING_FOLDER_PATH/python/lib\" \n\t    rsync -au --delete \"$PROJECT_DIR/site_packages/iphoneos/\" \"$CODESIGNING_FOLDER_PATH/site_packages\" \n\tfi\n\trsync -au --delete \"$PROJECT_DIR/app/\" \"$CODESIGNING_FOLDER_PATH/app\"\nelse\n    echo \"Installing Python modules for macOS\"\n    #mkdir -p \"$CODESIGNING_FOLDER_PATH/python/lib\"\n\trsync -au --delete \"$PROJECT_DIR/Support/macos-arm64_x86_64/lib/\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/python/lib\"\n\t\n\tSITE_DST=\"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/site_packages\"\n\tmkdir -p $SITE_DST\n\tmkdir -p \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/app\"\n\techo \"Installing Python modules for macOS Device\"\n\trsync -au --delete \"$PROJECT_DIR/site_packages/macos/\" $SITE_DST\n\trsync -au --delete \"$PROJECT_DIR/app/\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/app\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62CD2C763FDE0704D1BD1F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40E95345EE765D3DFF79694F /* main.swift in Sources */,
+				3DE1A8BD0E6CD68E8F17FB85 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58012BDBF71EE93CA0B003ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KivyThorGames.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Support\"",
+				);
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pyswift.KivyThorGames;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6090498A763A4AEB28E56CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KivyThorGames.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7AZRR7LN3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Support\"",
+				);
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.pyswift.KivyThorGames;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CB28020CA29D453779A6142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F014BE51C083E31E16699D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A9B8F497A4F614F36E5EFBA /* Build configuration list for PBXNativeTarget "KivyThorGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58012BDBF71EE93CA0B003ED /* Debug */,
+				6090498A763A4AEB28E56CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CEA87983A9574548F7925488 /* Build configuration list for PBXProject "KivyThorGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F014BE51C083E31E16699D30 /* Debug */,
+				9CB28020CA29D453779A6142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17980C2E38EAB5F270DDB84F /* XCRemoteSwiftPackageReference "KivyLauncher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kivy-school/KivyLauncher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		6864E7B73F0317D1F023DD6B /* XCRemoteSwiftPackageReference "CPython" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/py-swift/CPython";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 313.0.0;
+			};
+		};
+		BDFFFCE515DFB0B86B794B80 /* XCRemoteSwiftPackageReference "Kivy_iOS_Module" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kivy-school/Kivy_iOS_Module";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FFBF1423192C4D8CABEC9598 /* XCRemoteSwiftPackageReference "PySwiftKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/py-swift/PySwiftKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 313.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DB5119031C47D35760D0AC4 /* CPython */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6864E7B73F0317D1F023DD6B /* XCRemoteSwiftPackageReference "CPython" */;
+			productName = CPython;
+		};
+		6170EE4E97DB5AB61D704839 /* Kivy3Launcher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17980C2E38EAB5F270DDB84F /* XCRemoteSwiftPackageReference "KivyLauncher" */;
+			productName = Kivy3Launcher;
+		};
+		6AB44F85B4CC02A37DD933AF /* Kivy3Launcher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17980C2E38EAB5F270DDB84F /* XCRemoteSwiftPackageReference "KivyLauncher" */;
+			productName = Kivy3Launcher;
+		};
+		7778E69854AB9622E4C4DF1B /* PySwiftKitBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFBF1423192C4D8CABEC9598 /* XCRemoteSwiftPackageReference "PySwiftKit" */;
+			productName = PySwiftKitBase;
+		};
+		BEF6C5241C67D03533726764 /* Kivy_iOS_Module */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDFFFCE515DFB0B86B794B80 /* XCRemoteSwiftPackageReference "Kivy_iOS_Module" */;
+			productName = Kivy_iOS_Module;
+		};
+		F88137A6F274957865F99728 /* Kivy_iOS_Module */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDFFFCE515DFB0B86B794B80 /* XCRemoteSwiftPackageReference "Kivy_iOS_Module" */;
+			productName = Kivy_iOS_Module;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5C1418BE9DC4DDDDB6BCBF54 /* Project object */;
+}

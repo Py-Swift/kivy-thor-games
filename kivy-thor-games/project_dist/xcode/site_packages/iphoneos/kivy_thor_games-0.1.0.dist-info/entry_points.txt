@@ -1,0 +1,3 @@
+[console_scripts]
+kivy-thor-games = kivy_thor_games:main
+

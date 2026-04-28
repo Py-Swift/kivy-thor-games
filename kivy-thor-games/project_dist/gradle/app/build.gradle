@@ -1,0 +1,9 @@
+plugins {
+    id 'swift-application'
+    id 'xctest'
+}
+
+application {
+    targetMachines.add(machines.linux.x86_64)
+    targetMachines.add(machines.linux.aarch64)
+}
