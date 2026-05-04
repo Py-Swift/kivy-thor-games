@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: kivy-thor
+Version: 0.1.0
+Summary: Add your description here
+Author-email: psychowasp <psychowaspx@gmail.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: kivy>=3.0.0.dev0
+Requires-Dist: thorvg-cython>=0.0.4
+Requires-Dist: pyjnius; sys_platform == "android"
+Requires-Dist: pyobjus; sys_platform == "ios"

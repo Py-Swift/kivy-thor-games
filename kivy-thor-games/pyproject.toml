@@ -18,6 +18,8 @@ dependencies = [
     "thor-tempest-run",
     "thor-tetris",
     "thorvg-cython>=0.0.5",
+    "pyjnius; sys_platform == 'android'",
+    "pyobjus; sys_platform == 'ios'",
 ]
 description = "Add your description here"
 name = "kivy-thor-games"

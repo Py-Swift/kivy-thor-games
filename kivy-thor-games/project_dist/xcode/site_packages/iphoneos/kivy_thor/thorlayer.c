@@ -5,12 +5,12 @@
     "distutils": {
         "depends": [
             "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/dependencies/thorvg-cython/thorvg/src/bindings/capi/thorvg_capi.h",
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/include/gl_redirect.h"
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/include/gl_redirect.h"
         ],
         "include_dirs": [
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/graphics",
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/tools/gles_compat",
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/include",
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/graphics",
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/tools/gles_compat",
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/include",
             "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/dependencies/thorvg-cython/thorvg/src/bindings/capi"
         ],
         "name": "kivy_thor.thorlayer",

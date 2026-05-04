@@ -1,0 +1,4 @@
+module CPySwiftObject {
+    umbrella header "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/checkouts/PySwiftKit/Sources/CPySwiftObject/CPySwiftObject.h"
+    export *
+}

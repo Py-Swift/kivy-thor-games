@@ -1,0 +1,4 @@
+module CPython {
+    umbrella header "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/checkouts/CPython/Sources/CPython/CPython.h"
+    export *
+}

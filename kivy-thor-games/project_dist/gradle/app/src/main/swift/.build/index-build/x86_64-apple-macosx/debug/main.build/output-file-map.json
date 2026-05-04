@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/master.swiftdeps"
+  },
+  "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift": {
+    "dependencies": "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/SDL3Main.d",
+    "object": "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/SDL3Main.swift.o",
+    "swiftmodule": "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/SDL3Main~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/SDL3Main.swiftdeps",
+    "diagnostics": "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/SDL3Main.dia"
+  }
+}

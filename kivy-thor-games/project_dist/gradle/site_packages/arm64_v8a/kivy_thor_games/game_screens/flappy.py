@@ -1,0 +1,52 @@
+import os
+
+import kivy as _kivy
+from kivy.clock import Clock
+from thorvg_cython import Text
+
+from kivy_thor.thor_screen import ThorScreen
+from thor_flappy.game import FlappyScene
+
+Text.font_load(os.path.join(os.path.dirname(_kivy.__file__), 'data', 'fonts', 'Roboto-Regular.ttf'))
+Text.font_load(os.path.join(os.path.dirname(_kivy.__file__), 'data', 'fonts', 'Roboto-Bold.ttf'))
+
+
+class FlappyScreen(ThorScreen):
+
+    def __init__(self, **kwargs):
+        print(f"FlappyScreen init with kwargs: {kwargs}")
+        self.frame_delay = kwargs.pop("frame_delay", 0)
+        super().__init__(**kwargs)
+        self._scene = FlappyScene(font='Roboto-Regular', font_bold='Roboto-Bold')
+        self.ask_update = self.canvas.ask_update
+        glcanvas = self.gl_canvas
+        glcanvas.add(self._scene)
+        glcanvas.add(self._scene.hud)
+
+    def on_enter(self, *args):
+        print(f"FlappyScreen on_enter with frame_delay: {self.frame_delay}")
+        self.clock = Clock.schedule_interval(self._tick, self.frame_delay)
+        return super().on_enter(*args)
+
+    def on_leave(self, *args):
+        if hasattr(self, 'clock'):
+            self.clock.cancel()
+        return super().on_leave(*args)
+
+    def on_size(self, instance, size):
+        w, h = int(size[0]), int(size[1])
+        if w == 0 or h == 0:
+            return
+        
+        #self.set_size((w, h))
+        self._scene.resize(w, h)
+        return super().on_size(instance, size)
+
+    def on_touch_down(self, touch):
+        self._scene.tap()
+        return True
+
+    def _tick(self, dt):
+        self._scene.tick(dt)
+        #self.refresh()
+        self.ask_update()

@@ -6,16 +6,16 @@
         "depends": [
             "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/dependencies/kivy/ios-kivy-dependencies/dist/include/EGL/egl.h",
             "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/dependencies/thorvg-cython/thorvg/src/bindings/capi/thorvg_capi.h",
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/include/gl_redirect.h"
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/include/gl_redirect.h"
         ],
         "extra_link_args": [
             "-undefined",
             "dynamic_lookup"
         ],
         "include_dirs": [
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/graphics",
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/tools/gles_compat",
-            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-voqm7jq1/lib/python3.13/site-packages/kivy/include",
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/graphics",
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/tools/gles_compat",
+            "/private/var/folders/yc/904502tj68772rzcgxbf98140000gn/T/build-env-77s5rf3z/lib/python3.13/site-packages/kivy/include",
             "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/dependencies/thorvg-cython/thorvg/src/bindings/capi",
             "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/dependencies/kivy/ios-kivy-dependencies/dist/include"
         ],
@@ -9821,7 +9821,7 @@ static int __pyx_f_9kivy_thor_8thor_fbo_7ThorFbo_apply(struct __pyx_obj_9kivy_th
  *         """
  *         self.bind()             # <<<<<<<<<<<<<<
  *         self.gl_canvas.update()
- *         self.gl_canvas.draw(True)
+ *         self.gl_canvas.draw(False)
 */
   __pyx_t_1 = ((struct __pyx_vtabstruct_9kivy_thor_8thor_fbo_ThorFbo *)__pyx_v_self->__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->bind(__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -9831,7 +9831,7 @@ static int __pyx_f_9kivy_thor_8thor_fbo_7ThorFbo_apply(struct __pyx_obj_9kivy_th
  *         """
  *         self.bind()
  *         self.gl_canvas.update()             # <<<<<<<<<<<<<<
- *         self.gl_canvas.draw(True)
+ *         self.gl_canvas.draw(False)
  *         self.gl_canvas.sync()
 */
   __pyx_t_1 = ((struct __pyx_vtabstruct_13thorvg_cython_9gl_canvas_GlCanvas *)__pyx_v_self->gl_canvas->__pyx_base.__pyx_vtab)->__pyx_base.update(((struct __pyx_obj_13thorvg_cython_6thorvg_Canvas *)__pyx_v_self->gl_canvas), 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
@@ -9841,19 +9841,19 @@ static int __pyx_f_9kivy_thor_8thor_fbo_7ThorFbo_apply(struct __pyx_obj_9kivy_th
   /* "kivy_thor/thor_fbo.pyx":326
  *         self.bind()
  *         self.gl_canvas.update()
- *         self.gl_canvas.draw(True)             # <<<<<<<<<<<<<<
+ *         self.gl_canvas.draw(False)             # <<<<<<<<<<<<<<
  *         self.gl_canvas.sync()
  *         RenderContext.apply(self)
 */
   __pyx_t_2.__pyx_n = 1;
-  __pyx_t_2.clear = 1;
+  __pyx_t_2.clear = 0;
   __pyx_t_1 = ((struct __pyx_vtabstruct_13thorvg_cython_9gl_canvas_GlCanvas *)__pyx_v_self->gl_canvas->__pyx_base.__pyx_vtab)->__pyx_base.draw(((struct __pyx_obj_13thorvg_cython_6thorvg_Canvas *)__pyx_v_self->gl_canvas), 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "kivy_thor/thor_fbo.pyx":327
  *         self.gl_canvas.update()
- *         self.gl_canvas.draw(True)
+ *         self.gl_canvas.draw(False)
  *         self.gl_canvas.sync()             # <<<<<<<<<<<<<<
  *         RenderContext.apply(self)
  *         self.release()
@@ -9863,7 +9863,7 @@ static int __pyx_f_9kivy_thor_8thor_fbo_7ThorFbo_apply(struct __pyx_obj_9kivy_th
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "kivy_thor/thor_fbo.pyx":328
- *         self.gl_canvas.draw(True)
+ *         self.gl_canvas.draw(False)
  *         self.gl_canvas.sync()
  *         RenderContext.apply(self)             # <<<<<<<<<<<<<<
  *         self.release()

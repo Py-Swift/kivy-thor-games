@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<main-x86_64-apple-macosx15.0-debug.module>"]
+  "main-x86_64-apple-macosx15.0-debug.module": ["<main-x86_64-apple-macosx15.0-debug.module>"]
+  "test": ["<main-x86_64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift"]
+    outputs: ["/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/sources"]
+    description: "Write auxiliary file /Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/sources"
+
+  "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode-26.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt"
+
+  "<main-x86_64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/Modules/main.swiftmodule"]
+    outputs: ["<main-x86_64-apple-macosx15.0-debug.module>"]
+
+  "C.main-x86_64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/swift-version--3CB7CFEC50E0D141.txt","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/sources"]
+    outputs: ["/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/Modules/main.swiftmodule"]
+    description: "Compiling Swift Module 'main' (1 sources)"
+    args: ["/Applications/Xcode-26.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","main","-emit-dependencies","-emit-module","-emit-module-path","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/Modules/main.swiftmodule","-output-file-map","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/output-file-map.json","-parse-as-library","-incremental","@/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/sources","-I","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-j16","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/x86_64-apple-macosx/debug/main.build/include/main-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode-26.3.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode-26.3.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","swift"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Package.swift","/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

@@ -6,10 +6,6 @@ import XCTest
 @testable import App
 
 class KivyThorGamesTests: XCTestCase {
-    public static let allTests = [
-        ("testExample", testExample),
-    ]
-
     func testExample() {
         XCTAssertTrue(true)
     }

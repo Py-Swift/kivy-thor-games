@@ -1,0 +1,146 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "cpython",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/py-swift/CPython",
+          "name" : "CPython"
+        },
+        "path" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/index-build/checkouts/CPython/Frameworks/Python.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "Python"
+      }
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "cpython",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/py-swift/CPython",
+          "name" : "CPython"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "1a8beb8414362dd2f305f82a2a008e089fc80616",
+            "version" : "313.8.4"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "CPython"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "kivylauncher",
+          "kind" : "fileSystem",
+          "location" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/swift_packages/KivyLauncher",
+          "name" : "KivyLauncher"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/swift_packages/KivyLauncher"
+        },
+        "subpath" : "kivylauncher"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "pathkit",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/kylef/PathKit",
+          "name" : "PathKit"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "3bfd2737b700b9a36565a8c94f4ad2b050a5e574",
+            "version" : "1.0.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "PathKit"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "pyswiftkit",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/py-swift/PySwiftKit",
+          "name" : "PySwiftKit"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "57da95de514658b44c589d669fca66a21b7c145d",
+            "version" : "313.1.2"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "PySwiftKit"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "pythonlauncher",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/py-swift/PythonLauncher",
+          "name" : "PythonLauncher"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "37193f844d59149dd7cd9dc72cffc95d4d1c9e44",
+            "version" : "313.7.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "PythonLauncher"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "spectre",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/kylef/Spectre.git",
+          "name" : "Spectre"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "26cc5e9ae0947092c7139ef7ba612e34646086c7",
+            "version" : "0.10.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Spectre"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-syntax",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/swiftlang/swift-syntax.git",
+          "name" : "swift-syntax"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "f99ae8aa18f0cf0d53481901f88a0991dc3bd4a2",
+            "version" : "601.0.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-syntax"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

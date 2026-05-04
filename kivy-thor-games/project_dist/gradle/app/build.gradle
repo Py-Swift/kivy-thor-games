@@ -1,9 +1,93 @@
 plugins {
-    id 'swift-application'
-    id 'xctest'
+    id 'com.android.application'
 }
 
-application {
-    targetMachines.add(machines.linux.x86_64)
-    targetMachines.add(machines.linux.aarch64)
+// ── Swift for Android build tasks ────────────────────────────────────────────
+def swiftlyPath    = "${System.getProperty('user.home')}/.swiftly/bin/swiftly"
+def swiftVersion   = "6.3.1"
+def swiftSdkBase   = "${System.getProperty('user.home')}/Library/org.swift.swiftpm/swift-sdks/swift-${swiftVersion}-RELEASE_android.artifactbundle"
+def swiftAndroid   = "${swiftSdkBase}/swift-android"
+def swiftApiLevel  = "28"
+
+def archs = [
+    [abi: "arm64-v8a",  triple: "aarch64-unknown-linux-android", swiftArch: "aarch64", ndkTriple: "aarch64-linux-android"],
+    [abi: "x86_64",     triple: "x86_64-unknown-linux-android",  swiftArch: "x86_64",  ndkTriple: "x86_64-linux-android"],
+]
+
+archs.each { arch ->
+    def abiCap    = arch.abi.replaceAll("[-_]", "").capitalize()
+    def sdkTarget = "${arch.triple}${swiftApiLevel}"
+    def buildDir  = "src/main/swift/.build/${sdkTarget}"
+    def jniOut    = "src/main/jniLibs/${arch.abi}"
+
+    def buildTask = tasks.register("swiftBuild${abiCap}Debug", Exec) {
+        group = "swift"
+        workingDir = file("src/main/swift")
+        executable = swiftlyPath
+        args "run", "+${swiftVersion}", "swift", "build",
+             "--swift-sdk", sdkTarget,
+             "--configuration", "debug",
+             "-Xbuild-tools-swiftc", "-DTARGET_ANDROID"
+        doFirst { println "Building Swift for ${arch.abi}: swiftly ${args.join(' ')}" }
+    }
+
+    def copyTask = tasks.register("copySwift${abiCap}Debug") {
+        group = "swift"
+        dependsOn buildTask
+        doLast {
+            def outDir = file(jniOut)
+            outDir.mkdirs()
+
+            // compiled .so from SwiftPM
+            fileTree("${buildDir}/debug").matching { include "*.so" }.each { f ->
+                copy { from f; into outDir }
+            }
+            // Swift stdlib .so files
+            fileTree("${swiftAndroid}/swift-resources/usr/lib/swift-${arch.swiftArch}/android").matching { include "*.so" }.each { f ->
+                copy { from f; into outDir }
+            }
+            // libc++_shared.so from NDK sysroot
+            def libcpp = file("${swiftAndroid}/ndk-sysroot/usr/lib/${arch.ndkTriple}/libc++_shared.so")
+            if (libcpp.exists()) copy { from libcpp; into outDir }
+        }
+    }
+
+    project.afterEvaluate {
+        def merge = tasks.findByName("mergeDebugJniLibFolders")
+        if (merge) merge.dependsOn(copyTask)
+        else tasks.findByName("compileDebugSources")?.dependsOn(copyTask)
+    }
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
+android {
+    namespace 'org.example.kivythorgames'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'org.example.kivythorgames'
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+
+        ndk {
+            abiFilters 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
 }

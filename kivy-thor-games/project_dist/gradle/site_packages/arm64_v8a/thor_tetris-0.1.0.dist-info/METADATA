@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: thor-tetris
+Version: 0.1.0
+Summary: Tetris game with thorvg-cython rendering and pymunk debris physics
+Author: psychowasp
+Author-email: psychowasp <psychowaspx@gmail.com>
+Requires-Dist: pymunk
+Requires-Dist: thorvg-cython>=0.0.5
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+

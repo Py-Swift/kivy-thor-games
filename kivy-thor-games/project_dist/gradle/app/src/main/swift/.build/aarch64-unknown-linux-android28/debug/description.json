@@ -1,0 +1,237 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.main-aarch64-unknown-linux-android28-debug.module" : {
+      "executable" : "/Users/codebuilder/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/sources",
+      "importPath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/swift-version--4593C87FF15AF76D.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "main",
+      "moduleOutputPath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/Modules/main.swiftmodule",
+      "objects" : [
+        "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/SDL3Main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "aarch64-unknown-linux-android28",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j16",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/ModuleCache",
+        "-resource-dir",
+        "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/swift-resources/usr/lib/swift-aarch64",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/include/main-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Users/codebuilder/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/ndk-sysroot",
+        "-Xclang-linker",
+        "-fuse-ld=lld",
+        "-sdk",
+        "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/ndk-sysroot",
+        "-g",
+        "-Xcc",
+        "--sysroot",
+        "-Xcc",
+        "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/ndk-sysroot",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "swift",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/SDL3Main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/Modules/main.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift"
+      ],
+      "tempsPath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "main" : [
+      "/Users/codebuilder/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "main",
+      "-package-name",
+      "swift",
+      "-c",
+      "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift",
+      "-I",
+      "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/Modules",
+      "-target",
+      "aarch64-unknown-linux-android28",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j16",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/ModuleCache",
+      "-resource-dir",
+      "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/swift-resources/usr/lib/swift-aarch64",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/include/main-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Users/codebuilder/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/ndk-sysroot",
+      "-Xclang-linker",
+      "-fuse-ld=lld",
+      "-sdk",
+      "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/ndk-sysroot",
+      "-g",
+      "-Xcc",
+      "--sysroot",
+      "-Xcc",
+      "/Users/codebuilder/Library/org.swift.swiftpm/swift-sdks/swift-6.3.1-RELEASE_android.artifactbundle/swift-android/ndk-sysroot",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "swift",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/Users/codebuilder/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "main" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/Sources/main/SDL3Main.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/sources"
+    },
+    "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/SDL3Main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.build/main.swiftmodule.o"
+        }
+      ],
+      "outputFilePath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/main.product/Objects.LinkFileList"
+    },
+    "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/swift-version--4593C87FF15AF76D.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/codebuilder/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Volumes/CodeSSD/thorvg-development/kivy-thor-games/kivy-thor-games/project_dist/gradle/app/src/main/swift/.build/aarch64-unknown-linux-android28/debug/swift-version--4593C87FF15AF76D.txt"
+    }
+  }
+}
