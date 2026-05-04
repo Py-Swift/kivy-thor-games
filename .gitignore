@@ -17,3 +17,6 @@ dependencies/thorvg-cython
 .psproject/
 .psproject/backends/sh.py
 .psproject/backends/bin/pip3
+
+kivy-thor-games/kivy-thor-games/project_dist/gradle/site_packages/
+kivy-thor-games/kivy-thor-games/project_dist/xcode/site_packages/
