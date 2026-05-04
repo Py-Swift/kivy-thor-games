@@ -1,3 +1,0 @@
-[console_scripts]
-thor-asteroids = thor_asteroids:main
-

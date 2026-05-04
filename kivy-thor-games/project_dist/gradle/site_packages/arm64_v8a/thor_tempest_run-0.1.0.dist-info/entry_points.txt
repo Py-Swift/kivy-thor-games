@@ -1,3 +1,0 @@
-[console_scripts]
-thor-tempest-run = thor_tempest_run:main
-
