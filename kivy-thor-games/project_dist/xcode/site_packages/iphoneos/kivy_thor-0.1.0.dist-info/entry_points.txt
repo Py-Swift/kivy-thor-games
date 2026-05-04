@@ -1,2 +1,0 @@
-[console_scripts]
-kivy-thor = kivy_thor:main

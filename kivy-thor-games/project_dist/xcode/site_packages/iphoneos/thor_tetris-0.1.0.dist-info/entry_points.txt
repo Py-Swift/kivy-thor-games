@@ -1,3 +1,0 @@
-[console_scripts]
-thor-tetris = thor_tetris:main
-
